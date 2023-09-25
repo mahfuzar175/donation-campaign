@@ -1,13 +1,52 @@
+import Swal from "sweetalert2";
+
 const ItemCard = ({ item }) => {
-  const { picture, price, title, description, category_bg, card_bg } =
+  const {id, picture, price, title, description, category_bg} =
     item || {};
+
+    const handleAddtoDonate = () =>{
+        const addedDonateArray = [];
+        const donateItems = JSON.parse(localStorage.getItem('donate'));
+        
+        if(!donateItems){
+            addedDonateArray.push(item);
+            localStorage.setItem('donate', JSON.stringify(addedDonateArray));
+            Swal.fire(
+                'Successfully Donated!',
+                'You clicked the button!',
+                'success'
+            )
+        }
+        else{
+
+            const isExists = donateItems.find(item => item.id == id);
+            if(!isExists){
+                addedDonateArray.push(...donateItems, item);
+                localStorage.setItem('donate', JSON.stringify(addedDonateArray));
+                Swal.fire(
+                    'Successfully Donated!',
+                    'You clicked the button!',
+                    'success'
+                )
+            }
+            else{
+                Swal.fire(
+                    'Error!',
+                    'You already donate!',
+                    'error'
+                )  
+            }
+        }
+
+    }
+
   return (
     <div>
-      <div className="p-4 md:p-0">
+      <div className="p-4 lg:p-0">
         <div className="relative">
           <img className="w-full rounded-none" src={picture} alt="" />
           <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8  bg-[#0B0B0B80] bg-opacity-50">
-            <button
+            <button onClick={handleAddtoDonate}
               style={{ backgroundColor: category_bg }}
               className="middle none center mr-4 rounded-md py-2 px-4 md:py-3 md:px-6 text-base font-semibold text-white normal-case"
             >
