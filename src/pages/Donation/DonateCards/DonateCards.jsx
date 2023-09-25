@@ -1,11 +1,9 @@
 const DonateCards = ({ item }) => {
   const {
-    id,
     picture,
     category,
     price,
     title,
-    description,
     card_bg,
     category_bg,
   } = item || {};
