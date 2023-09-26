@@ -7,7 +7,7 @@ const ItemCard = ({ item }) => {
     const handleAddtoDonate = () =>{
         const addedDonateArray = [];
         const donateItems = JSON.parse(localStorage.getItem('donate'));
-        
+
         if(!donateItems){
             addedDonateArray.push(item);
             localStorage.setItem('donate', JSON.stringify(addedDonateArray));
@@ -50,7 +50,7 @@ const ItemCard = ({ item }) => {
               style={{ backgroundColor: category_bg }}
               className="middle none center mr-4 rounded-md py-2 px-4 md:py-3 md:px-6 text-base font-semibold text-white normal-case"
             >
-              Donate $ {price}
+              Donate ${price}
             </button>
           </div>
         </div>

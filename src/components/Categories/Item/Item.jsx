@@ -4,7 +4,7 @@ const Item = ({ item }) => {
   const {id, picture, category, title, category_bg, card_bg } = item || {};
   return (
     <div className="mt-8 md:mt-4">
-      <Link to={`/categories/${id}`}>
+      <Link to={`/categories/${id}`} state={category}>
         <div
           style={{ backgroundColor: card_bg }}
           className="card bg-base-100 rounded-md shadow-lg"

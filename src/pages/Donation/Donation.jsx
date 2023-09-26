@@ -8,7 +8,7 @@ const Donation = () => {
 
   useEffect(() => {
     const donateItems = JSON.parse(localStorage.getItem("donate"));
-    
+
     if (donateItems) {
       setDonate(donateItems);
     } else {
@@ -20,8 +20,23 @@ const Donation = () => {
     setShowAll(!showAll);
   };
 
+  const deleteAllItems = () => {
+    setDonate([]);
+    localStorage.removeItem("donate");
+    setNoDataFound("No data found!!!");
+  };
+
   return (
     <div>
+      {donate.length > 0 && (
+        <button
+          className="mb-4 mx-auto block bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+          onClick={deleteAllItems}
+        >
+          Delete All
+        </button>
+      )}
+
       {nodatafound ? (
         <h2 className="h-[60vh] flex justify-center items-center font-bold text-4xl">{nodatafound}</h2>
       ) : (
