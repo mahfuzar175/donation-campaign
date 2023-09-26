@@ -10,7 +10,7 @@ const DonateCards = ({ item }) => {
         className="md:w-full md:flex gap-8 my-4 rounded-md"
       >
         <div>
-          <img className="w-full" src={picture} alt="" />
+          <img className="w-full md:w-[312px] md:h-[194px]" src={picture} alt="" />
         </div>
         <div className="mt-4">
           <div className="ml-4 md:ml-0">

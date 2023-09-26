@@ -55,7 +55,7 @@ const ItemCard = ({ item }) => {
           </div>
         </div>
         <div className="mt-6 mb-6">
-          <h2 className="text-4xl text-black font-bold">{title}</h2>
+          <h2 className="text-2xl md:text-4xl text-black font-bold">{title}</h2>
         </div>
         <div>
           <h2 className="text-[#0B0B0BB2]">{description}</h2>
