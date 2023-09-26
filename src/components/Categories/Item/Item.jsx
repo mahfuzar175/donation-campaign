@@ -10,7 +10,7 @@ const Item = ({ item }) => {
           className="card bg-base-100 rounded-md shadow-lg"
         >
           <figure>
-            <img className="w-full" src={picture} alt="img" />
+            <img className="w-full md:h-[183px]" src={picture} alt="img" />
           </figure>
           <div className="card-body">
             <h2

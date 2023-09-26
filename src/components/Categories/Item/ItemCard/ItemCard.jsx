@@ -44,8 +44,8 @@ const ItemCard = ({ item }) => {
     <div>
       <div className="p-4 lg:p-0">
         <div className="relative">
-          <img className="w-full rounded-none" src={picture} alt="" />
-          <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8  bg-[#0B0B0B80] bg-opacity-50">
+          <img className="w-full rounded-md" src={picture} alt="" />
+          <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8  bg-[#0B0B0B80] bg-opacity-50 rounded-b-md">
             <button onClick={handleAddtoDonate}
               style={{ backgroundColor: category_bg }}
               className="middle none center mr-4 rounded-md py-2 px-4 md:py-3 md:px-6 text-base font-semibold text-white normal-case"
