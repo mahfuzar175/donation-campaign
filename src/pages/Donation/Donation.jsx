@@ -47,12 +47,12 @@ const Donation = () => {
         </div>
       )}
 
-      {donate.length > 4 && (
+      {donate.length > 4 && !showAll && (
         <button
           className="mt-4 mx-auto block bg-green-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded"
           onClick={toggleShowAll}
         >
-          {showAll ? "Show Less" : "See All"}
+          See All
         </button>
       )}
     </div>
