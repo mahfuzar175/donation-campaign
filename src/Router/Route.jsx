@@ -15,7 +15,11 @@ const router = createBrowserRouter([
         {
             path: "/",
             element: <Home></Home>,
-            loader: () => fetch('/categories.json')
+            loader: async () => {
+              const res = await fetch('/categories.json');
+              const categories = await res.json();
+              return categories;
+            }
         },
         {
             path: "/donation",
@@ -24,12 +28,20 @@ const router = createBrowserRouter([
         {
             path: "/statistics",
             element: <Statistics></Statistics>,
-            loader: () => fetch('/categories.json')
+            loader: async () => {
+              const res = await fetch('/categories.json');
+              const donationData = await res.json();
+              return donationData;
+            }
         },
         {
           path: "/categories/:id",
           element: <Details></Details>,
-          loader: () => fetch('/categories.json')
+          loader: async () => {
+            const res = await fetch('/categories.json');
+            const categories = await res.json();
+            return categories;
+          }
         }
       ]
     },
