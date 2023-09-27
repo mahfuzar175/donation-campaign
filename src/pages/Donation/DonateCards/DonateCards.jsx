@@ -7,10 +7,10 @@ const DonateCards = ({ item }) => {
     <div>
       <div
         style={{ backgroundColor: card_bg }}
-        className="md:w-full md:flex gap-8 my-4 rounded-md"
+        className="md:w-full md:flex gap-8 my-4 rounded-lg"
       >
         <div>
-          <img className="w-full md:w-[312px] md:h-[194px]" src={picture} alt="" />
+          <img className="w-full md:w-[312px] md:h-[194px] rounded-t-lg md:rounded-l-lg" src={picture} alt="" />
         </div>
         <div className="mt-4">
           <div className="ml-4 md:ml-0">
