@@ -1,11 +1,11 @@
+import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Categories from "../../components/Categories/Categories";
 import Banner from "../../components/Header/Banner/Banner";
-import { useState } from "react";
 
 const Home = () => {
   const categories = useLoaderData();
-  const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [filteredData, setFilteredData] = useState(categories);
 
   const handleSearch = () => {
@@ -14,7 +14,7 @@ const Home = () => {
     );
 
     setFilteredData(filtered);
-  }
+  };
 
   return (
     <div>
@@ -22,8 +22,12 @@ const Home = () => {
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
         handleSearch={handleSearch}
-      ></Banner>
-      <Categories categories={filteredData}></Categories>
+      />
+      {filteredData.length === 0 ? (
+        <p className="mt-4 text-center text-base md:text-2xl font-bold">No matching categories found!!!</p>
+      ) : (
+        <Categories categories={filteredData} />
+      )}
     </div>
   );
 };

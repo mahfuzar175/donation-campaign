@@ -1,3 +1,5 @@
+import React from "react";
+
 const Banner = ({ selectedCategory, setSelectedCategory, handleSearch }) => {
   return (
     <div className="relative h-[70vh]">
