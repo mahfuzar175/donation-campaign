@@ -4,7 +4,7 @@ const Banner = ({ selectedCategory, setSelectedCategory, handleSearch }) => {
   return (
     <div className="relative h-[70vh]">
       <img
-        src="https://i.ibb.co/wdjJsRV/Rectangle-4281.png"
+        src="https://i.ibb.co/TTpRLq7/Rectangle-4281.png"
         alt="Banner Background"
         className="w-full h-full object-cover absolute inset-0 opacity-10"
       />
