@@ -2,7 +2,7 @@
 const Logo = () => {
     return (
         <div>
-            <img className="w-[230px]" src="https://i.ibb.co/7bhjGsc/Logo.png" alt="" />
+            <img className="w-[230px]" src="https://i.ibb.co/kDH4jTz/Logo.png" alt="" />
         </div>
     );
 };
